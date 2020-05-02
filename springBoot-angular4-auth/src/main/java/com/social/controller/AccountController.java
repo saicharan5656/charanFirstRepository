@@ -43,15 +43,4 @@ public class AccountController {
 		
 		return new ResponseEntity<User>(userService.save(newUser), HttpStatus.CREATED);
 	}
-
-	
-	// this is the login api/service
-		@CrossOrigin
-		@RequestMapping("/login")
-		public Principal user(Principal principal) {
-			logger.info("user logged "+principal);
-			return principal;
-		}
-	
-	
 }
